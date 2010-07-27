@@ -1,0 +1,364 @@
+
+/********************************************************/
+/** Unique Item           **/
+/********************************************************/
+.tm{
+	color: #000099;
+	font-family: monospace;
+}
+
+
+
+#msg-div{
+    position: absolute;
+	z-index: 80000;
+}
+
+
+
+#site_logo{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+/********************************************************/
+/** Main Containers           **/
+/********************************************************/
+
+body{
+	background-color: #efefef;
+}
+
+
+#header_container{
+	border-bottom: 1px solid #cccccc;
+}
+
+
+
+
+#header_box{
+	max-width: 1100px;
+	padding: 5px;
+	color: #666666;
+	height: 60px;
+	position: relative;
+	margin: 0px auto;
+}
+#header_box img{
+	float: right;
+	margin: 5px;
+	width: 69px;
+}
+#header_box h1{
+	SSbackground-color: blue;
+	font-size: 10pt;
+	margin: 5px 0px 0px 10px;
+	sstext-align: right;
+	font-family:  monospace;
+	color: #113A65;
+}
+#header_box h2{
+	font-family: monospace;
+	SSbackground-color: red;
+	font-size: 8pt;
+	font-weight: normal;
+	margin: 10px 0px 0px 0px;
+	text-align: right;
+	float: right;
+	clear: right;
+	width: 30%;
+}
+#header_box h2 small{
+	font-size: 8pt;
+}
+#header_box h2 b{
+	font-size: 10pt;
+}
+#header_box h2 a{
+	color: #666666;
+}
+#header_box h2 a:hover{
+	color: blue;
+}
+
+
+/********************************************************/
+/** Site Havigation        **/
+/********************************************************/
+#navlist{
+	padding: 6px 0px;
+	font: bold 10pt sans-serif;
+	position: absolute;
+	bottom: 0px;
+}
+
+#navlist li{
+	list-style: none;
+	display: inline;
+}
+
+#navlist li a {
+	padding: 6px 10px;
+	margin-left: 14px;
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	border: 1px solid #cccccc;
+	border-bottom: none;
+	background: #dddddd;
+	text-decoration: none;
+	color: #113A65;
+}
+
+#navlist li a:hover{
+	color: #000;
+	background: #efefef;
+	border-color: #dddddd;
+}
+
+#navlist li a.selected{
+	background: white;
+	border-bottom: 1px solid white;
+	color: black;
+}
+/********************************************************/
+/** Content Container                **/
+/********************************************************/
+#content_container{
+	background-color: white;
+	padding: 30px;
+}
+
+/********************************************************/
+/** Content Box                 **/
+/********************************************************/
+#content_box{
+	max-width: 1100px;
+	margin: 0px auto;
+	font-family: sans-serif;
+	min-height: 400px;
+}
+
+#content_box h1{
+	font-family: sans-serif;
+	font-size: 18pt;
+	ssmargin-bottom: 20px;
+	padding: 5px 0px;
+	ssmargin-left: 40px;
+	border-bottom: 1px solid #dddddd;
+}
+
+#content_box h5{
+	font-family: sans-serif;
+	font-size: 10pt;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	sspadding: 5px 10px;
+	ssmargin-left: 40px;
+	ssborder: 1px solid #dddddd;
+	ssbackground-color: #efefef;
+}
+#content_box h5 a{
+	text-decoration: none;
+	color: #666666;
+}
+#content_box h5 a:hover{
+	text-decoration: underline;
+	color: #000099;
+}
+#content_box DEADform{
+	font-family: sans-serif;
+	font-size: 14pt;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	margin-left: 40px;
+	margin-top: 40px;
+}
+#content_box p{
+	margin-left: 40px;
+	line-height: 140%;
+	font-size: 10pt;
+	margin-bottom: 20px;
+	margin-right: 50px;
+}
+
+#content_box .content ul{
+	margin-left: 70px;
+	line-height: 140%;
+	font-size: 10pt;
+	margin-left: 100px;
+}
+#content_box .content li{
+	list-style-type: circle;
+	margin-bottom: 10px;
+}
+
+
+/********************************************************/
+/** Comment Box                 **/
+/********************************************************/
+#comment_box{
+	max-width: 1100px;
+	margin: 0px auto;
+	font-size: 10pt;
+	clear: both;
+	padding-top: 20px;
+}
+
+#comment_box h5{
+	font-size: 10pt;
+	font-weight: normal;
+	background-color: #efefef;
+	padding: 5px;
+	border-top: 1px solid #bbbbbb;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-family: monospace;
+}
+#comment_box h6{
+	font-size: 8pt;
+	font-weight: normal;
+	padding: 5px 0px 5px 10px;
+	border-left: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	margin-left: 20px;
+}
+
+#comment_box p{
+	font-size: 9pt;
+}
+
+/********************************************************/
+/** Footer Box                 **/
+/********************************************************/
+
+#footer_container{
+	border-top: 1px solid #cccccc;
+}
+
+#footer_box{
+	max-width: 1100px;
+	clear: both;
+	margin: 0px auto;
+	padding: 10px 0px 10px 0px;
+	font-size: 8pt;
+	border-top: 1px dotted #dddddd;
+	font-family: sans-serif;
+}
+
+
+
+
+
+
+#help_text_div{
+padding: 10px;
+}
+#help_text_div p{
+padding: 10px;
+}
+
+.icoFilterOn{background-image: url('/images/bullet_pink.png') !important;}
+.icoFilterOff{background-image: url('/images/bullet_purple.png') !important;}
+
+.icoRefresh{background-image: url('/images/refresh.gif') !important;}
+.icoSave{background-image: url('/images/accept.png') !important;}
+.icoCancel{background-image: url('/images/bullet_black.png') !important;}
+.icoDelete{background-image: url('/images/bullet_delete.png') !important;}
+.icoHelp{background-image: url('/images/help.png') !important;}
+
+.icoFpp{background-image: url('/images/layout.png') !important;}
+.icoFppAdd{background-image: url('/images/layout_add.png') !important;}
+.icoFppEdit{background-image: url('/images/layout_edit.png') !important;}
+.icoFppDelete{background-image: url('/images/layout_delete.png') !important;}
+.icoFppTake{background-image: url('/images/layout.png') !important;}
+
+.icoTimeline{background-image: url('/images/date.png') !important;}
+
+.icoPlans{background-image: url('/images/table_multiple.png') !important;}
+.icoPlan{background-image: url('/images/table.png') !important;}
+.icoPlanAdd{background-image: url('/images/table_add.png') !important;}
+.icoPlanEdit{background-image: url('/images/table_edit.png') !important;}
+.icoPlanDelete{background-image: url('/images/table_delete.png') !important;}
+
+
+.x-form-miscfield {
+	height: 22px;
+	line-height: 18px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.ext-ie .x-form-miscfield {
+    height: 22px; /* ie quirks */
+    line-height: 18px;
+}
+.ext-strict .x-form-miscfield {
+    height: 18px;
+}
+.ext-safari .x-form-miscfield {
+    height: 20px; /* safari always same size */
+}
+.ext-gecko .x-form-miscfield {
+    padding-top: 2px; /* FF won't center the text vertically */
+    padding-bottom: 0;
+}
+
+/* Static field text */
+.ux-form-statictextfield {
+    background: transparent;
+    border: none;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    color: #111;
+    overflow: hidden; 
+    border: 1px solid white
+}
+
+
+#map_zones li{
+	list-style-type: none;
+	display: inline;
+	border-left: 10px solid #efefef;
+	padding-left: 5px;
+	margin-right: 20px;
+}
+
+
+
+.map_info_window{
+	WWwidth: 300px;
+	WWmin-height: 100px;
+}
+.map_info_window h1{
+	font-size: 10pt;
+	color: #444444;
+	border: none;
+}
+.map_info_window p{
+	font-size: 8pt;
+	color: #222222;
+	border: none;
+	margin: 0px;
+}
+
+
+#index_tag_box{
+	width: 200px;
+	float: left; 
+	margin-left: 20px;
+	background-color: #efefef;
+	border: 1px solid #dddddd;
+	min-height: 500px;
+}
+#index_tag_box a{
+	text-decoration: none;
+	color: #333333;
+	float: left;
+	margin: 5px;
+}
+#index_tag_box a:hover{
+	text-decoration: underline;
+	color: #000099;
+}

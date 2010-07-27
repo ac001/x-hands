@@ -1,0 +1,22 @@
+{% extends "main_container.html" %}
+{% set active_page = 'rpxauth' -%}
+{% block content %}
+<div id="content_box">
+
+<h2>Sign In</h2>
+
+<ul>
+<li>This site uses <a href="http://en.wikipedia.org/wiki/OpenID"><b>OpenID</b></a> for authentication.</li>
+<li>If you don't have an OpenID through any of the providers below, then <a href="https://www.myopenid.com/signup"><b>click here to sign up</b></a> with <a href="https://www.myopenid.com">myOpenID</a>.</li>
+<li>IMPORTANT: If you login with two different providers, then you have two seperate accounts.</li>
+</ul>
+
+
+<iframe src="http://xhands-wales.rpxnow.com/openid/embed?token_url={{ token_url }}" 
+		scrolling="no" frameBorder="no" allowtransparency="true" 
+		style="width:400px;height:240px; margin: 50px;">
+</iframe>
+
+
+</div>
+{% endblock content %}

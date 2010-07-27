@@ -1,0 +1,45 @@
+{% extends "../main_container.html" %}
+
+{% block content %}
+
+<div id="content_box">
+
+<h1>{{ title }}</h1>
+<h5><a href="/profile/">&lt;&lt; Back</a></h5>
+
+<p><b>Drag</b> and <b>Drop</b> the marker to the front door on the map. Double click to zoom, hold button and drag mouse to scroll.</p>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+
+<!--<script type="text/javascript" src="/js/xMap.js"></script>-->
+<!--
+<div id="listing_help">
+<ul>
+<li>Enter you business details below.</li>
+<li></li>
+</ul>
+</div>
+-->
+<!--#### Listing Form ####-->
+<script type="text/javascript" src="/js/xMap.js"></script>
+<div id="widget_div"></div>
+<script type="text/javascript" src="/js/xListingWidget.js"></script>
+<script>
+
+
+Ext.onReady(function(){
+	widget = new xListingWidget({listID: '{{ listID }}' });
+	//widget.map_initialize();
+});
+
+</script>
+
+
+	<div id="map_canvas" class="x-hide-display"  
+		style="width: 100%; height: 600px; background-color: #efefef; border: 1px solid #efefef;">
+	</div>
+
+
+</div>
+{% endblock content %}

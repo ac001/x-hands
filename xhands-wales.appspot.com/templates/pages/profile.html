@@ -1,0 +1,64 @@
+{% extends "main_container.html" %}
+{% set active_page = 'profile' -%}
+{% block content %}
+
+<div id="content_box">
+
+<h1>Profile: {{ sessName }}</h1>
+<h5>&nbsp;</h5>
+
+
+{#% if confirm %#}
+<ul>
+<li>An email has been sent to <b>{#{ user.email }#}</b>.</li>
+<li>Please check your mailbox in a few moments for further instruction.</li>
+
+</ul>
+
+{#% else %#}
+
+{#% if status == 'auth' %#}
+
+{#% else %#}
+<ul>
+<li>Your account had not been verfied by email.</li>
+<li>Complete ALL the details below then click the <b>Send Verification Email</b>.</li>
+<li>You will need to click the link in the email to gain access.</li>
+</ul>
+{#% endif %#}
+
+
+<!--#### User Form ####-->
+<div id="profile_widget_div" style="width: 500px; float: left;"></div>
+<script type="text/javascript" src="/js/xUserForm.1.js"></script>
+<script>
+
+Ext.onReady(function(){
+	var profileWidget = new xUserForm({});
+	// {#{ app.user_json_str }#}
+});
+
+</script>
+
+
+<!--#### Listings  ####-->
+{#% if user.status == 'auth' %#}
+<fieldset>
+<legend>My Listings</legend>
+<p><a href="/profile/listing/?listID=0">New</a></b>
+</fieldset>
+
+
+<script>
+
+
+
+</script>
+{#% endif %#}
+
+{#% endif %#}
+{#{  app.user.status }#}#
+
+
+</div>
+{% endblock content %}

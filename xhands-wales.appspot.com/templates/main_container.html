@@ -1,0 +1,141 @@
+{% set active_page = active_page|default('index') -%}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>{{ page_title }} - {{ site.title }}</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1;">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+
+<link rel="stylesheet" type="text/css" href="{{ site.CDN }}/style_sheets/reset.css">
+{% if load_ext %}
+<link rel="stylesheet" type="text/css" href="{{ site.CDN }}/js/ext-3.2.0/resources/css/ext-all.css">
+{% endif %}
+<link rel="stylesheet" type="text/css" href="/style_sheets/xhands.1.css">
+
+{% if load_ext %}
+<script type="text/javascript" src="{{ site.CDN }}/js/ext-3.2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="{{ site.CDN }}/js/ext-3.2.0/ext-all.js"></script>
+<script type="text/javascript" src="/js/StaticTextField.js"></script>
+<script type="text/javascript" src="/js/Ext.xh.1.js"></script>
+{% endif %}
+
+
+<script type="text/javascript">
+var DEFAULT_LAT = {{ site.DEFAULT_LAT }};
+var DEFAULT_LNG = {{ site.DEFAULT_LNG }};
+var CENTER_LAT = {{ site.CENTER_LAT }};
+var CENTER_LNG = {{ site.CENTER_LNG }};
+var widget = null;
+</script>
+
+</head> 
+
+<body> 
+
+<div id="header_container">
+	<img src="/images/logo.png" alt="{{ site.name }}" id="site_logo">
+	<div id="header_box">
+		<!-- Logo and Title -->
+		
+	<div style="text-align: right; margin: 5px 0px 0px 200px; float: right;">
+	<form action="http://www.google.com/cse" id="cse-search-box">
+	<div>
+		<input type="hidden" name="cx" value="015533335378102415313:7herof6pxcy">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" size="20">
+		<input type="submit" name="sa" value="Search">
+		</div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+	</div>
+
+		<h1>{{ site.title }}</h1>
+		{% if user %}
+			<h2><small>Signed In:</small> <b><a href="/profile/">{{ sessName }}</a></b></h2>
+		{% else %}
+			<h2>&nbsp;</h2>
+		{% endif %}
+
+
+		
+		<!-- Navigation -->
+		<ul id="navlist">
+			{% for href, id, label, security in site.nav %}
+				<li><a {% if active_page == id  %}class="selected"{% endif %} href="{{ href }}" >{{ label }}</a>
+			{% endfor %}
+			{% if signedin == True  %}
+				<li><a  href="javascript:signOut();" >Sign Off</a>
+			{% endif %}
+		</ul>
+	</div>
+
+</div>
+
+<div id="content_container">
+	<!--### Main Content ########################-->
+	{% block content %}
+	content here
+	{% endblock content %}
+			
+	<!--### Comment Box ########################-->
+
+	<div id="comment_box">
+		<h5>Bugs, Comments and Suggestions</h5>
+		{% for c in comments %}
+			<h6><i>{{ c.author.nickname }}</i> at {{ c.dated }}</h6>
+			<p>sss{{ c.comment }}</p>
+		{% endfor %}
+		{#
+		<form action="/comment/" method="post">
+			<input type="hidden" value="add_comment" name="action">
+			<input type="hidden" value="{{ app.section }}" name="section">
+			<textarea style="width: 100%; " rows="5" name="comment"></textarea>
+			<input type="submit" value="Add Comment">
+		</form>
+		#}
+	</div>
+
+     
+</div>	<!-- content cotainer -->
+   
+
+<!--### Navigation ########################-->
+<div id="footer_container">
+	<div id="footer_box">
+
+		<p>
+		<a href="https://appengine.google.com/dashboard?&app_id=XXX">Dashboard</a> -
+		&copy;  "DATE-200XY"  <a href="http://daffodil.uk.com">daffodil.uk.com</a> - all right reserved etc
+		<p>
+	</div><!-- end footer-->
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+function signOut(){
+	if(confirm("Sign Out - Clicking Yes will nuke the cookie")){ 
+			location.href = '/auth/signoff/'
+	}
+}
+</script>
+
+{# Google Analytics
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16165394-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+#}
+</body> 
+</html>

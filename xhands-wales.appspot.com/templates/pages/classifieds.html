@@ -1,0 +1,20 @@
+{% extends "main_container.html" %}
+{% set active_page = 'classifieds' -%}
+{% block content %}
+<div id="content_box">
+
+<h1>Classifieds</h1>
+<h5>TODO</h5>
+
+<table>
+{% for ls in listings %}
+<tr>
+<td>{{ ls.name }}</td>
+<td>{{ ls.www }}</td>
+<td>{{ ls.address }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+{% endblock content %}
